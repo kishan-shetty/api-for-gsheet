@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL"; // Replace this
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxTVzx8ijYlheZsMte3f_QYEcwHRixyt4YwqtJX43IR0-m386kqa5obaRMdc_kzdblg8g/exec"; // Replace this
 
 app.post("/proxy", async (req, res) => {
   try {
