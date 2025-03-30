@@ -12,19 +12,31 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxTVzx8ijYlhe
 
 app.post("/proxy", async (req, res) => {
   try {
+    console.log("Received request:", req.body);
+
     const response = await fetch(GOOGLE_SCRIPT_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(req.body),
     });
 
-    const data = await response.json();
-    res.status(200).json(data);
+    const text = await response.text(); // Get raw text response
+    console.log("Raw Response from Google Script:", text); // Log raw response
+
+    try {
+      const data = JSON.parse(text); // Try to parse JSON
+      res.status(200).json(data);
+    } catch (jsonError) {
+      console.error("Failed to parse JSON:", jsonError);
+      res.status(500).json({ error: "Invalid JSON response", raw: text });
+    }
+
   } catch (error) {
-    console.error("Error fetching from Google Script:", error);
-    res.status(500).json({ error: "Failed to fetch from Google Apps Script" });
+    console.error("Error in /proxy route:", error);
+    res.status(500).json({ error: error.message });
   }
 });
+
 
 // Add a status route
 app.get("/", (req, res) => {
