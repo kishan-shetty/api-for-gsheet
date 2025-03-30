@@ -19,6 +19,7 @@ app.get('/api/candidates', async (req, res) => {
       params: { action: 'getCandidates' },
     });
     res.json(data);
+    console.log('API Response:', data);
   } catch (error) {
     console.error('Error fetching candidates:', error.message);
     res.status(500).json({ error: 'Failed to fetch data from Google Sheets' });
