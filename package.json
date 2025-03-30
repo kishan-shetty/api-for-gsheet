@@ -1,13 +1,12 @@
 {
-  "name": "render-proxy",
+  "name": "candidate-dashboard-server",
   "version": "1.0.0",
-  "type": "module",
   "main": "server.js",
+  "type": "commonjs",
   "dependencies": {
     "express": "^4.18.2",
     "cors": "^2.8.5",
-    "node-fetch": "^2.6.7",
-    "axios": "^1.6.7"
+    "axios": "^1.6.0"
   },
   "scripts": {
     "start": "node server.js"
