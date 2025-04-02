@@ -52,7 +52,7 @@ app.post('/api/send-reminders', async (req, res) => {
     const { days, batch } = req.body;
     if (!days || !batch) return res.status(400).json({ error: 'Missing required fields' });
 
-    const { data } = await axios.post(https://script.google.com/macros/s/AKfycbw36bWg50iyj5wSm9f80cPJx2M691wI1w_9Sh3SeCuKLYEpq9tscjpnOHSroUhpVdJG/exec, {
+    const { data } = await axios.post(GOOGLE_SCRIPT_URL, {
       action: 'sendReminders',
       days,
       batch,
