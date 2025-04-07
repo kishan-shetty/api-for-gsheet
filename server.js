@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 10000;
 
 // Google Apps Script Web App URL (Replace with actual URL)
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyRpiVEDpbZJcUvaikHinCUz0HSqTr2v82FHe3u8DZXO7oCt4rpi4jEvzyJfPihPLPs/exec';
-const GOOGLE_SCRIPT_2URL = 'https://script.google.com/macros/s/AKfycbw36bWg50iyj5wSm9f80cPJx2M691wI1w_9Sh3SeCuKLYEpq9tscjpnOHSroUhpVdJG/exec';
+const GOOGLE_SCRIPT_2URL = 'https://script.google.com/macros/s/AKfycbwZF6jL4DVOqCUNEF2TaQj9Wx1uSDCqgHsXFWm783twDcff7ZBpXcbDHUgSdcEa4Pbt/exec';
 
 // Middleware
 app.use(cors());
