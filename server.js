@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 10000;
 
 // Google Apps Script Web App URL (Replace with actual URL)
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHGHFACC4NjC6ivTnhLZq4DxusMPqXpyELIZ-KiCjIwebpe_nudqCSR2nOoXmfOnLq/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyRpiVEDpbZJcUvaikHinCUz0HSqTr2v82FHe3u8DZXO7oCt4rpi4jEvzyJfPihPLPs/exec';
 const GOOGLE_SCRIPT_2URL = 'https://script.google.com/macros/s/AKfycbw36bWg50iyj5wSm9f80cPJx2M691wI1w_9Sh3SeCuKLYEpq9tscjpnOHSroUhpVdJG/exec';
 
 // Middleware
